@@ -15,41 +15,4 @@ public class HelloWorldController {
         return "Hello World";
     }
 
-    @RequestMapping("/")
-    public List json(HttpServletRequest request) {
-        System.out.println("===json===");
-        System.out.println("getServerName====="+request.getServerName());
-        System.out.println("getServerPort====="+request.getServerPort());
-        List<Human> list = new ArrayList<>();
-        list.add(new Human("死地方", 223));
-        list.add(new Human("反得分", 21));
-        return list;
-    }
-
-}
-
-class Human{
-    private String name;
-    private int age;
-
-    public Human(String name, int age){
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }
